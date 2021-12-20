@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Throwing 1 die</title>
+    <title>Craps game</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body onLoad="init();"> 
-
+<body> 
+  <div class="rules">
+    <h2>Rules</h2>
+    You roll the dice. You win if you roll a 7 or 11 on your first throw. You lose if your first throw is 2,3 or 12. For any other result (4,5,6,8,9,10) the score is recorded as your point. A follow up throw is required and for the follow up a repeat of your first point wins and a 7 loses. 
+  </div>
   <canvas id="canvas" width="400" height ="300">
+    
     Your browser does not support the canvas element.
   </canvas>
-  
-  <script src="throwDie.js"></script>
+  <br />
+  <button onClick="throwDice();">Throw Dice</button>
+  <form name="f">
+    Stage: <input name="stage" value="First throw" />
+    Point: <input name="pv" value=" " />
+    Outcome: <input name="outcome" value=" " />
+  </form>
+  <script src="throw2dice.js"></script>
 </body>
 </html>
